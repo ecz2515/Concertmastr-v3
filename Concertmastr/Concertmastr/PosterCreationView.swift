@@ -108,11 +108,10 @@ struct PosterCreationView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.purple)
+                    .background(artistName.isEmpty || venueName.isEmpty ? Color.gray : Color.purple)
                     .cornerRadius(12)
                 }
                 .disabled(artistName.isEmpty || venueName.isEmpty)
-                .opacity(artistName.isEmpty || venueName.isEmpty ? 0.6 : 1.0)
                 .padding(.horizontal)
                 
                 Spacer(minLength: 50)

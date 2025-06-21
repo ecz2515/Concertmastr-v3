@@ -82,7 +82,7 @@ struct PreviewView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.blue)
+                        .background(artistName.isEmpty || venueName.isEmpty ? Color.gray : Color.blue)
                         .cornerRadius(12)
                     }
                     .disabled(artistName.isEmpty || venueName.isEmpty)

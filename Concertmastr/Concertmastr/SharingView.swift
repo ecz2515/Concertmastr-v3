@@ -121,6 +121,14 @@ struct SharingView: View {
         }
         .navigationTitle("Share")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Done") {
+                    // Action to go back to root or main view
+                }
+                .font(.headline)
+            }
+        }
         .alert("Saved!", isPresented: $showingSaveSuccess) {
             Button("OK") { }
         } message: {
